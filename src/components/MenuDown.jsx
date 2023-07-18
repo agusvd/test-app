@@ -15,7 +15,7 @@ const MenuDown = () => {
                 </Link>
                 <Link to="/" className='text-white'>
                     <div className='relative'>
-                        <div className='absolute top-10 right-4 w-2 h-2 rounded-full bg-red-600 animate-ping duration-100'></div>
+                        <div className='absolute top-10 right-4 w-2 h-2 rounded-full bg-red-600 animate-ping duration-300'></div>
                         <div class="absolute top-10 right-4 w-2 h-2 rounded-full bg-red-600"></div>
                         {isHome ? 
                             <AiFillHome size={40} /> : <AiOutlineHome size={40} />}
