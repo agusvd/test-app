@@ -1,16 +1,17 @@
 import React from 'react'
 import perfil from '../assets/perfil2.jpeg'
+import post1 from '../assets/post1.jpeg'
 import { Link } from 'react-router-dom'
-import {BiMenu} from 'react-icons/bi'
+import { BiMenu } from 'react-icons/bi'
 
 const Profile = () => {
     return (
         <div className='h-full bg-black'>
             <div className=''>
                 <div className='p-2 flex justify-between'>
-                    <Link></Link>
+                    <h2 className='text-white text-2xl'>@Duki</h2>
                     <Link className='text-white'>
-                        <BiMenu size={40}/>
+                        <BiMenu size={40} />
                     </Link>
                 </div>
                 <div className='p-5 justify-center items-center flex flex-col'>
@@ -33,6 +34,13 @@ const Profile = () => {
                 </div>
                 <div className='p-2'>
                     <p className='text-white text-start'>Descripcion del usuario</p>
+                </div>
+            </div>
+            <div className='bg-slate-900 h-screen'>
+                <div className='grid grid-cols-2'>
+                    <img src={post1} className='' />
+                    <img src='' />
+                    <img src='' />
                 </div>
             </div>
         </div>
