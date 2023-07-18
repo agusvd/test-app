@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <div className='h-full bg-black'>
             <div className=''>
-                <div className='border-2 p-2 flex justify-between'>
+                <div className='p-2 flex justify-between'>
                     <Link></Link>
                     <Link className='text-white'>
                         <BiMenu size={40}/>
