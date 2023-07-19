@@ -12,22 +12,22 @@ const MenuDown = () => {
 
     return (
         <div className='sticky bottom-0'>
-            <div className='bg-black justify-around flex pb-3 py-2 px-2 items-center'>
-                <Link className='text-white'>
-                    <BiStar size={40} />
+            <div className='bg-white text-black dark:text-white dark:bg-black justify-around flex pb-3 py-2 px-2 items-center'>
+                <Link>
+                    <BiStar size={30} />
                 </Link>
-                <Link to="/" className='text-white'>
+                <Link to="/">
                     <div className='relative'>
-                        <div className='absolute top-10 right-4 w-2 h-2 rounded-full bg-red-600 animate-ping duration-300'></div>
-                        <div class="absolute top-10 right-4 w-2 h-2 rounded-full bg-red-600"></div>
+                        <div className='absolute top-8 right-2.5 w-2 h-2 rounded-full bg-red-600 animate-ping duration-300'></div>
+                        <div class="absolute top-8 right-2.5 w-2 h-2 rounded-full bg-red-600"></div>
                         {isHome ? 
-                            <AiFillHome size={40} /> : <AiOutlineHome size={40} />}
+                            <AiFillHome size={30} /> : <AiOutlineHome size={30} />}
                     </div>
                 </Link>
-                <Link className='text-white'>
-                    <AiOutlineSearch size={40} />
+                <Link>
+                    <AiOutlineSearch size={30} />
                 </Link>
-                <Link to="/profile" className='text-white'>
+                <Link to="/profile">
                 {isProfile ? 
                     <FaUserCircle size={30}/> :
                     <FaRegUserCircle size={30}/> 
