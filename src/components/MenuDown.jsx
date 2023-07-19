@@ -2,10 +2,13 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { AiFillHome, AiOutlineHome, AiOutlineSearch,  } from 'react-icons/ai'
 import { BiStar } from 'react-icons/bi'
+import { FaRegUserCircle, FaUserCircle } from 'react-icons/fa'
+
 
 const MenuDown = () => {
     const location = useLocation()
     const isHome = location.pathname === '/'
+    const isProfile = location.pathname === '/profile'
 
     return (
         <div className='sticky bottom-0'>
@@ -23,6 +26,12 @@ const MenuDown = () => {
                 </Link>
                 <Link className='text-white'>
                     <AiOutlineSearch size={40} />
+                </Link>
+                <Link to="/profile" className='text-white'>
+                {isProfile ? 
+                    <FaUserCircle size={30}/> :
+                    <FaRegUserCircle size={30}/> 
+                }     
                 </Link>
             </div>
         </div>
