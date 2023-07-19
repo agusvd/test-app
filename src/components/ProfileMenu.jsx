@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { IoSettingsSharp, IoClose } from 'react-icons/io5'
 
 const ProfileMenu = ({ onClose }) => {
     return (
-        <div className='bg-gray-900 p-4 right-0 absolute top-0 w-3/5 h-screen rounded-l-3xl z-99'>
-            <div className='flex justify-start'>
-                <button className='text-white' onClick={onClose}>
-                    <IoClose size={40} />
-                </button>
-            </div>
-            <div className='flex flex-col items-start'>
-                <Link className='text-white text-2xl flex items-center gap-2'>
-                    <IoSettingsSharp />Configuracion
+        <div className='bg-white text-black dark:bg-black dark:text-white absolute bottom-0 rounded-xl w-full z-99'>
+            <div className='flex flex-col items-center p-2 space-y-3'>
+                <Link className='text-xl items-center gap-2'>
+                    Configuracion
                 </Link>
+                <Link className='text-xl items-center gap-2'>
+                    Notificaciones
+                </Link>
+                <Link className='text-xl items-center gap-2'>
+                    Cerrar sesion
+                </Link>
+                <button className='text-xl items-center' onClick={onClose}>
+                    Cancelar
+                </button>
             </div>
         </div>
     )
