@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import perfil from '../assets/perfil2.jpeg'
 import { Link } from 'react-router-dom'
-import { BiMenu, BiUserCheck } from 'react-icons/bi'
+import { BiMenu, BiUserCheck, BiMessageRounded, BiHeart } from 'react-icons/bi'
 import ProfileMenu from './ProfileMenu'
 import { IoSettingsSharp, IoClose } from 'react-icons/io5'
 import { MdVerified } from 'react-icons/md'
@@ -19,16 +19,29 @@ const Profile = () => {
 
     return (
         <div className='h-full bg-white text-black dark:bg-black dark:text-white'>
-            <div className='p-2 flex justify-between'>
-                <h2 className='text-xl'></h2>
-                <button onClick={handleOpenMenu} className=''>
+            <div className='sticky top-0 justify-between flex items-center p-2 bg-white dark:bg-black border-b-2'>
+                <div className='flex items-center justify-center gap-2'>
+                    <Link>
+                        <BiHeart size={35} />
+                    </Link>
+                </div>
+                <div>
+                    <h2 className='text-xl flex items-center gap-1'>Duki<MdVerified className='text-red-400' /></h2>
+                </div>
+                <button onClick={handleOpenMenu}>
                     <BiMenu size={40} />
                 </button>
             </div>
-            <div className='m-2'>
-                <div className='p-5 justify-center items-center flex flex-col gap-2'>
+            <div className='p-2'>
+                <div className='p-5 justify-center items-center flex gap-10'>
                     <img src={perfil} className="flex-none rounded-full w-32 h-32 object-cover" loading="lazy" />
-                    <h2 className='text-xl flex items-center gap-1'>Duki<MdVerified className='text-indigo-500'/></h2>
+                    <div className='flex flex-col'>
+                        <div className='flex flex-col gap-2'>
+                            <h2 className='text-xl flex items-center gap-1'>L♡veStar</h2>
+                            <h3>Aqui va la descripcion</h3>
+                        </div>
+                    </div>
+
                 </div>
                 <div className='p-2 flex flex-col justify-around'>
                     <div className='flex justify-around gap-10'>
@@ -45,15 +58,11 @@ const Profile = () => {
                             <h2 className='text-sm'>Miembro</h2>
                         </div>
                     </div>
-                    <div className='p-4 pt-10 text-start'>
-                        <p className='text-start'>L♡veStar</p>
-                    </div>
                 </div>
                 <div className='flex justify-center gap-4 p-2'>
-                    <button className='p-1 border-2 border-black dark:bg-slate-800/50 dark:hover:bg-slate-700 dark:border-white rounded-lg px-6 flex items-center gap-2'><IoSettingsSharp />Editar</button>
-                    <button className='p-1 border-2 border-black dark:bg-slate-800/50 dark:hover:bg-slate-700 dark:border-white rounded-lg px-6 flex items-center'>Seguir</button>
-                    <button className='p-1 border-2 border-black dark:bg-slate-800/50 dark:hover:bg-slate-700 dark:border-white rounded-lg px-6 flex items-center'>Mensaje</button>
-                    <button className='px-1 border-2 border-black dark:bg-slate-800/50 dark:hover:bg-slate-700 dark:border-white rounded-lg flex items-center '><BiUserCheck size={30}/></button>
+                    <button className='p-1 bg-red-500 hover:bg-red-500/80 text-white rounded-lg px-6 flex items-center font-bold'>Seguir</button>
+                    <button className='px-1 bg-red-500 hover:bg-red-500/80 text-white rounded-lg flex items-center'><BiUserCheck size={30} /></button>
+                    <button className='p-1 bg-black dark:bg-slate-800 hover:bg-slate-500/80 text-white rounded-lg px-6 flex items-center font-bold'>Mensaje</button>
                 </div>
                 <div className='border-b'></div>
             </div>

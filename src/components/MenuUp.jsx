@@ -4,7 +4,7 @@ import { BiMessageRounded, BiHeart } from 'react-icons/bi'
 
 const MenuUp = () => {
     return (
-        <div className='top-0'>
+        <div className='sticky top-0'>
             <div className='flex justify-between bg-white text-black dark:bg-black dark:text-white items-center pr-2 pl-2'>
                 <Link>
                     <BiHeart size={30} />
