@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import perfil from '../assets/perfil2.jpeg'
 import { Link } from 'react-router-dom'
-import { BiMenu, BiUserCheck, BiMessageRounded, BiHeart } from 'react-icons/bi'
+import { BiMenu, BiUserCheck } from 'react-icons/bi'
 import ProfileMenu from './ProfileMenu'
-import { IoSettingsSharp, IoClose } from 'react-icons/io5'
 import { MdVerified } from 'react-icons/md'
+import { BsArrowLeftShort } from 'react-icons/bs'
 
 const Profile = () => {
     const [ProfileMenuVisible, SetProfileMenuVisible] = useState(false)
@@ -21,14 +21,14 @@ const Profile = () => {
         <div className='h-full bg-white text-black dark:bg-black dark:text-white'>
             <div className='sticky top-0 justify-between flex items-center p-2 bg-white dark:bg-black border-b-2'>
                 <div className='flex items-center justify-center gap-2'>
-                    <Link>
-                        <BiHeart size={35} />
+                    <Link to="/" className='cursor-pointer hover:scale-110 duration-100 transition-all ease-in'>
+                        <BsArrowLeftShort size={35} />
                     </Link>
                 </div>
                 <div>
                     <h2 className='text-xl flex items-center gap-1'>Duki<MdVerified className='text-red-400' /></h2>
                 </div>
-                <button onClick={handleOpenMenu}>
+                <button onClick={handleOpenMenu} className='cursor-pointer hover:scale-110 duration-100 transition-all ease-in'>
                     <BiMenu size={40} />
                 </button>
             </div>
@@ -41,10 +41,9 @@ const Profile = () => {
                             <h3>Aqui va la descripcion</h3>
                         </div>
                     </div>
-
                 </div>
-                <div className='p-2 flex flex-col justify-around'>
-                    <div className='flex justify-around gap-10'>
+                <div className='p-2 flex flex-col justify-center items-center'>
+                    <div className='flex justify-between items-center w-64'>
                         <Link className='text-center'>
                             <p className='font-bold'>12.9 mill.</p>
                             <h2 className='text-sm'>Seguidores</h2>
