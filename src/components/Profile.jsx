@@ -66,14 +66,18 @@ const Profile = () => {
                 <div className='border-b'></div>
             </div>
             <div className='h-screen'>
+                <div className='flex gap-4 items-center justify-center'>
+                    <div className='p-2 transition-all ease-out '>Publicaciones</div>
+                    <div className='p-2 transition-all ease-out '>Calendario</div>
+                    <div className='p-2 bg-white rounded-xl text-black hover:bg-red-500 transition-all ease-out '>Resenas</div>
+                </div>
                 <div className='grid grid-cols-2'>
-                    <img src='' />
-                    <img src='' />
-                    <img src='' />
+                    <div className='p-2 border-2 h-96'>hola</div>
+
                 </div>
             </div>
             {ProfileMenuVisible && (
-                <div className="fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-50 flex justify-center items-center z-[99]">
+                <div className="fixed top-0 h-screen w-screen bg-black bg-opacity-50 flex justify-center items-center z-[99]">
                     <ProfileMenu onClose={handleCloseMenu} />
                 </div>
             )}
