@@ -1,10 +1,12 @@
 import React from 'react'
 import { BiTrash, BiEdit, BiSearch, BiInfoCircle } from 'react-icons/bi';
+import Navbar from '../components/Navbar';
 
 const Inicio = () => {
     return (
         <div className='h-screen text-black dark:text-white dark:bg-black text-center overflow-auto'>
-            <div className='flex flex-col gap-2 pb-10 pt-10'>
+            <Navbar/>
+            <div className='flex flex-col gap-2 pb-10'>
                 <a className='text-3xl'>Hola @usuario</a>
                 <a className='text-2xl'>¿Que quieres hacer?</a>
             </div>

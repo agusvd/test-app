@@ -1,22 +1,27 @@
 import React, { useState } from "react";
-import { BiArrowToRight, BiArrowToLeft } from "react-icons/bi";
-import { MdOutlineDashboard } from "react-icons/md";
+import { useLocation } from "react-router-dom";
+import { BiArrowToRight, BiArrowToLeft, BiSolidHome, BiHome, BiUser, BiSolidUser } from "react-icons/bi";
 import { RiSettings4Line } from "react-icons/ri";
 import { TbReportAnalytics } from "react-icons/tb";
-import { AiOutlineUser, AiOutlineHeart, AiOutlineCompass, AiOutlineCalendar } from "react-icons/ai";
-import { FiMessageSquare, FiFolder } from "react-icons/fi";
-import { IoPeopleOutline, IoPeopleSharp } from "react-icons/io5"
+import { AiOutlineHeart, AiOutlineCompass, AiOutlineCalendar } from "react-icons/ai";
+import { FiMessageSquare } from "react-icons/fi";
+import { IoPeopleOutline } from "react-icons/io5"
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+    const location = useLocation();
+
+    const isHome = location.pathname === '/'
+    const isProfile = location.pathname === '/profile'
+
     const menus = [
-        { name: "Inicio", link: "/", icon: MdOutlineDashboard },
+        { name: "Inicio", link: "/", icon: isHome ? BiSolidHome : BiHome},
         { name: "Explorar", link: "/", icon: AiOutlineCompass },
         { name: "Eventos", link: "/", icon: TbReportAnalytics, margin: true },
         { name: "Calendario", link: "/", icon: AiOutlineCalendar },
         { name: "Seguidos", link: "/", icon: IoPeopleOutline },
         { name: "Mensajes", link: "/", icon: FiMessageSquare },
-        { name: "Perfil", link: "/", icon: AiOutlineHeart, margin: true },
+        { name: "Perfil", link: "/profile", icon: isProfile ? BiSolidUser : BiUser, margin: true },
         { name: "Configuracion", link: "/", icon: RiSettings4Line },
     ];
     const [open, setOpen] = useState(true);

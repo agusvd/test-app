@@ -1,17 +1,17 @@
 // Home.jsx
 import React from 'react';
 import Sidebar from '../components/Sidebar';
-import Inicio from '../components/Inicio';
+import Profile from '../components/Profile';
 
-const Home = () => {
+const ProfilePage = () => {
     return (
         <div className="flex dark:bg-black">
             <Sidebar />
             <div className='h-screen w-full flex flex-col'>
-                <Inicio />
+                <Profile />
             </div>
         </div>
     );
 };
 
-export default Home;
+export default ProfilePage;
