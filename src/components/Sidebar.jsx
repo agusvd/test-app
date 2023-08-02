@@ -26,12 +26,12 @@ const Sidebar = () => {
     ];
     const [open, setOpen] = useState(true);
     return (
-        <div className={`dark:bg-black border-2 flex flex-col ${ open ? 'w-72' : 'w-20' } duration-500 text-black dark:text-gray-100 px-4`}>
-            <div className="py-3 px-2 flex justify-start rounded-md items-center hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer" onClick={() => setOpen(!open)}>
+        <div className={`hidden sm:flex sm:flex-col dark:bg-black ${ open ? 'w-72' : 'w-20' } duration-500 text-black dark:text-gray-100 px-4`}>
+            <div className="py-3 px-2 flex justify-start rounded-md items-center hover:bg-gray-200 dark:hover:bg-[#3a4750] cursor-pointer" onClick={() => setOpen(!open)}>
                 {open ?
-                    <div className="flex gap-4 text-lg">
+                    <div className="flex gap-3 text-lg">
                         <BiArrowToLeft size={26} className="cursor-pointer" onClick={() => setOpen(!open)} /> 
-                        <a>Cerrar</a>
+                        <a className="text-gray-900 font-semibold dark:text-white">Cerrar</a>
                     </div>
                     :
                     <BiArrowToRight size={26} className="cursor-pointer" onClick={() => setOpen(!open)} />
@@ -40,7 +40,7 @@ const Sidebar = () => {
             </div>
             <div className="mt-4 flex flex-col gap-4 relative text-center">
                 {menus?.map((menu, i) => (
-                    <Link to={menu?.link} key={i} className={` ${menu?.margin && "mt-5"} group flex items-center text-lg gap-4 font-medium p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-md`}>
+                    <Link to={menu?.link} key={i} className={` ${menu?.margin && "mt-5"} group flex items-center text-lg gap-4 font-medium p-2 hover:bg-gray-200 dark:hover:bg-[#3a4750] rounded-md`}>
                         <div>{React.createElement(menu?.icon, { size: "25" })}</div>
                         <h2 style={{ transitionDelay: `${i + 3}00ms`, }} className={`whitespace-pre duration-500 ${!open && "opacity-0 translate-x-28 overflow-hidden"}`}>
                             {menu?.name}

@@ -19,8 +19,10 @@ const Profile = () => {
 
     return (
         <div className='h-full bg-white text-black dark:bg-black dark:text-white'>
-            <div className='sticky top-0 justify-between flex items-center p-2 bg-white dark:bg-black border-b-2'>
+            {/* Profile menu mobile */}
+            <div className='sm:hidden sticky top-0 justify-between flex items-center p-2 bg-white dark:bg-black border-b-2'>
                 <div className='flex items-center justify-center gap-2'>
+                
                     <Link to="/" className='cursor-pointer hover:scale-110 duration-100 transition-all ease-in'>
                         <BsArrowLeftShort size={35} />
                     </Link>
@@ -32,11 +34,13 @@ const Profile = () => {
                     <BiMenu size={40} />
                 </button>
             </div>
+            {/* Fin profile menu mobile */}
             <div className='p-2'>
                 <div className='p-5 justify-center items-center flex gap-10'>
                     <img src={perfil} className="flex-none rounded-full w-32 h-32 object-cover" loading="lazy" />
                     <div className='flex flex-col'>
                         <div className='flex flex-col gap-2'>
+                            <h2 className='text-xl flex items-center gap-1'>Duki<MdVerified className='text-cyan-400' /></h2>
                             <h2 className='text-xl flex items-center gap-1'>L♡veStar</h2>
                             <h3>Aqui va la descripcion</h3>
                         </div>
@@ -59,11 +63,10 @@ const Profile = () => {
                     </div>
                 </div>
                 <div className='flex justify-center gap-4 p-2'>
-                    <button className='p-1 bg-cyan-500 hover:bg-cyan-500/80 text-white rounded-lg px-6 flex items-center font-bold'>Seguir</button>
-                    <button className='px-1 bg-cyan-500 hover:bg-cyan-500/80 text-white rounded-lg flex items-center'><BiUserCheck size={30} /></button>
+                    <button className='p-1 bg-cyan-400 hover:bg-cyan-500/80 text-white rounded-lg px-6 flex items-center font-bold'>Seguir</button>
+                    <button className='px-1 bg-cyan-400 hover:bg-cyan-500/80 text-white rounded-lg flex items-center'><BiUserCheck size={30} /></button>
                     <button className='p-1 bg-black dark:bg-slate-800 hover:bg-slate-500/80 text-white rounded-lg px-6 flex items-center font-bold'>Mensaje</button>
                 </div>
-                <div className='border-b'></div>
             </div>
             <div className='h-screen'>
                 <div className='flex gap-4 items-center justify-center'>
@@ -71,7 +74,6 @@ const Profile = () => {
                     <div className='p-2 hover:text-cyan-500 transition-all ease-out cursor-pointer dark:text-white'>Calendario</div>
                     <div className='p-2 hover:text-cyan-500 transition-all ease-out cursor-pointer dark:text-white'>Resenas</div>
                 </div>
-                <div className='border-b pt-2'></div>
                 <div className='grid grid-cols-2'>
                 </div>
             </div>
